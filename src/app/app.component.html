@@ -1,0 +1,19 @@
+<div class="grid grid-cols-12 min-h-screen">
+    <div class="col-span-2">
+        <navbar></navbar>
+    </div>
+    <div class="col-span-10">
+        <div class="grid grid-cols-12">
+            <div class="col-span-12 shadow-xs">
+                <div class="flex items-center border-b-1 border-gray-300 gap-2">
+                    <i class="cursor-pointer hover:bg-gray-200 pi pi-expand p-3 border-r-1 border-gray-300"></i>
+                    <p class="text-gray-500">Billset: Your finances, finally in your control.</p>
+                </div>
+            </div>
+            <div class="col-span-12 p-5">
+                <router-outlet />
+                <modal></modal>
+            </div>
+        </div>
+    </div>
+</div>

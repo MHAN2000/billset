@@ -1,0 +1,21 @@
+<div class="grid grid-cols-12">
+    <div class="col-span-12">
+        <div class="border-1 rounded-lg border-gray-300 bg-white flex p-3 gap-2">
+            <div
+                [ngClass]="['mt-1','rounded-full','p-3','flex','items-center','justify-center','h-5','w-5','bg-' + event.color + '-200']">
+                <i style="font-size: 0.5rem;" [ngClass]="['font-bold', event.icon, 'text-' + event.color + '-700']"></i>
+            </div>
+            <div class="flex flex-col w-full">
+                <div class="flex items-end justify-between">
+                    <h4>{{ event.title }}</h4>
+                    <p class="text-gray-500 text-sm">{{ event.date }}</p>
+                </div>
+                <div class="flex justify-between">
+                    <p class="text-gray-500">{{ event.frequency }}</p>
+                    <p [ngClass]="['font-semibold', 'text-lg', 'text-' + event.color + '-500']">${{ event.amount | number: '1.0-2' }}</p>
+                </div>
+                <p class="text-gray-500 text-sm">Account: {{ event.account }}</p>
+            </div>
+        </div>
+    </div>
+</div>

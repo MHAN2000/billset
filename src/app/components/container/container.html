@@ -1,0 +1,14 @@
+<div class="grid grid-cols-12">
+    <div class="col-span-12">
+        <div class="flex items-center gap-2">
+            <i *ngIf="icon" [ngClass]="['text-3xl', icon]"></i>
+            <div class="flex flex-col">
+                <h1 class="text-2xl font-normal">{{ title }}</h1>
+                <h2 class="text-sm text-gray-500">{{ subtitle }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-span-12 p-3">
+        <ng-container [ngTemplateOutlet]="bodyTemplate"></ng-container>
+    </div>
+</div>

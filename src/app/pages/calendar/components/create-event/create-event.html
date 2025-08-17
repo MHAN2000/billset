@@ -1,0 +1,76 @@
+<div class="grid grid-cols-12">
+    <div class="col-span-12">
+        <container icon="pi pi-wallet" title="Register an event" subtitle="Set the required properties to add this event to your calendar">
+            <ng-template #body>
+                <form [formGroup]="eventForm" class="grid grid-cols-12 gap-2">
+                    <div class="col-span-12">
+                        <div class="flex flex-col">
+                            <label>Title</label>
+                            <input formControlName="title" placeholder="Ex. Loan" />
+                        </div>
+                    </div>
+                    <div class="col-span-12">
+                        <div class="flex flex-col">
+                            <label>Description ({{ eventForm.get('description')?.value?.length }}/80)</label>
+                            <textarea cols="4" rows="2" formControlName="description"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-span-12">
+                        <div class="flex flex-col">
+                            <label>Category</label>
+                            <select>
+                                <option>Food</option>
+                                <option>Phone</option>
+                                <option>Home</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-span-6">
+                        <div class="flex flex-col">
+                            <label>Date</label>
+                            <input appendTo="body" type="date" placeholder="Ex. Loan" />
+                        </div> 
+                    </div>
+                    <div class="col-span-6">
+                        <div class="flex flex-col">
+                            <label>Amount</label>
+                            <input type="number" placeholder="1200.00" />
+                        </div> 
+                    </div>
+                    <div class="col-span-12">
+                        <div class="flex flex-col">
+                            <label>Type</label>
+                            <div class="flex gap-2">
+                                <button class="w-full h-8 border-2 rounded-md border-green-300 text-green-700 cursor-pointer hover:bg-green-200">In</button>
+                                <button class="w-full h-8 border-2 rounded-md border-red-300 text-red-700 cursor-pointer hover:bg-red-200">Out</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-6">
+                        <div class="flex flex-col">
+                            <label>Repeat</label>
+                            <select>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-span-6">
+                        <div class="flex flex-col">
+                            <label>Account</label>
+                            <select>
+                                <option>Debit</option>
+                                <option>Credit Card</option>
+                                <option>Cash</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-span-12">
+                        <button class="btn btn-black">Register Event</button>
+                    </div>
+                </form>
+            </ng-template>
+        </container>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="grid grid-cols-12 gap-2">
+    <div class="col-span-12">
+        <container icon="pi pi-tags" title="Categories and Accounts"
+            subtitle="Manage the categories and accounts where your expenses are assigned.">
+            <ng-template #body>
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-3">
+                        <card icon="pi pi-tag" header="Category" value="$3,200.00">
+                            <ng-template #cardCustom>
+                                <p class="text-gray-500">Home with the most usage</p>
+                            </ng-template>
+                        </card>
+                    </div>
+                    <div class="col-span-3">
+                        <card icon="pi pi-wallet" header="Balance" value="$4,230.00">
+                            <ng-template #cardCustom>
+                                <p class="text-gray-500">Net across all accounts</p>
+                            </ng-template>
+                        </card>
+                    </div>
+                    <div class="col-span-3">
+                        <card icon="pi pi-plus" header="Income" value="$2,042.50" color="text-green-700">
+                            <ng-template #cardCustom>
+                                <p class="text-gray-500">Income across all your calendar</p>
+                            </ng-template>
+                        </card>
+                    </div>
+                    <div class="col-span-3">
+                        <card icon="pi pi-minus" header="Expenses" value="$1,050.20" color="text-red-600">
+                            <ng-template #cardCustom>
+                                <p class="text-gray-500">Expenses across all your calendar</p>
+                            </ng-template>
+                        </card>
+                    </div>
+                </div>
+            </ng-template>
+        </container>
+    </div>
+    <div class="col-span-6">
+        <container icon="pi pi-tag" title="Categories">
+            <ng-template #body>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-12">
+                        <div class="flex w-full gap-2">
+                            <input style="width: 80%;" placeholder="Filter your categories" />
+                            <button (click)="createCategory()" style="width: 20%;" class="btn btn-black">
+                                <i class="pi pi-plus"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-span-12">
+                        <div class="mt-4 flex flex-col gap-2">
+                            <categories-accounts-card *ngFor="let category of categories" [icon]="category.icon" [type]="category.type" [value]="category.value"></categories-accounts-card>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </container>
+    </div>
+    <div class="col-span-6">
+        <container icon="pi pi-wallet" title="Accounts">
+            <ng-template #body>
+                <div class="grid grid-cols-12">
+                    <div class="col-span-12">
+                        <div class="flex w-full gap-2">
+                            <input style="width: 80%;" placeholder="Filter your accounts" />
+                            <button (click)="createAccount()" style="width: 20%;" class="btn btn-black">
+                                <i class="pi pi-plus"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-span-12">
+                        <div class="mt-4 flex flex-col gap-2" style="height: 18rem; overflow: auto;">
+                            <categories-accounts-card *ngFor="let account of accounts" [icon]="account.icon" [type]="account.type" [value]="account.value"></categories-accounts-card>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </container>
+    </div>
+</div>

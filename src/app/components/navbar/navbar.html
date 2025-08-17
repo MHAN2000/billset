@@ -1,0 +1,20 @@
+<div class="grid grid-cols-12 p-3 bg-gray-50 border-r-1 border-gray-300 shadow-lg h-full content-start">
+    <div class="col-span-12">
+        <div class="flex gap-2 items-center">
+            <i class="pi pi-receipt text-3xl bg-black text-white p-2 rounded-lg"></i>
+            <div class="flex flex-col">
+                <p class="text-xl font-semibold">Billset</p>
+                <p class="text-sm text-gray-500">Money Management made simple</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-span-12">
+        <h2 class="mt-10 text-gray-600 px-2">Navigation</h2>
+        <div class="mt-2 flex flex-col gap-2">
+            <div [routerLink]="[route.path]" *ngFor="let route of routes" class="px-2 py-1 cursor-pointer hover:bg-gray-200 rounded-lg flex items-center gap-2">
+                <i [class]="route.icon"></i>
+                <p>{{ route.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>
