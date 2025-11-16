@@ -9,13 +9,14 @@ import { ModalService } from "../../components/modal/services/modal.service";
 import { TransactionCardComponent } from "../../components/transaction-card/transaction-card";
 import { Event } from "./types";
 import { CreateEventComponent } from './components/create-event/create-event';
+import { CardComponent } from "../../components/card/card";
 
 @Component({
   selector: 'calendar',
   templateUrl: './calendar.html',
   standalone: true,
   providers: [DatePipe],
-  imports: [CommonModule, FullCalendarModule, ContainerComponent, TransactionCardComponent]
+  imports: [CommonModule, FullCalendarModule, ContainerComponent, TransactionCardComponent, CardComponent]
 })
 
 export class CalendarComponent {

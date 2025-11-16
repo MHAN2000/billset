@@ -1,7 +1,7 @@
 services:
   billset:
     build: .
-    command: sh -c "npm install && ng serve --host 0.0.0.0"
+    command: sh -c "npm install && ng serve --host 0.0.0.0 --poll 500"
     ports:
       - "4200:4200"
     volumes:

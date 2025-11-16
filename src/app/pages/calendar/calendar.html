@@ -1,4 +1,42 @@
 <div class="grid grid-cols-12">
+    <div class="col-span-12">
+        <container icon="pi pi-eye" title="Month Overview" subtitle="Quick gaze into your transactions!">
+            <ng-template #body>
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="col-span-3">
+                        <card icon="pi pi-plus" header="Monthly Income" value="$2,042.50" color="text-green-700">
+                            <ng-template #cardCustom>
+                                <p class="text-gray-500">Incomes across all the month</p>
+                            </ng-template>
+                        </card>
+                    </div>
+                    <div class="col-span-3">
+                        <card icon="pi pi-minus" header="Monthly Expenses" value="$1,050.20" color="text-red-600">
+                            <ng-template #cardCustom>
+                                <p class="text-gray-500">Expenses across all the month</p>
+                            </ng-template>
+                        </card>
+                    </div>
+                    <div class="col-span-3">
+                        <card icon="pi pi-minus" header="Monthly Net Profit" value="$1,050.20" color="text-red-600">
+                            <ng-template #cardCustom>
+                                <p class="text-gray-500">Your net profit at the end of the month</p>
+                            </ng-template>
+                        </card>
+                    </div>
+                    <div class="col-span-3">
+                        <card icon="pi pi-minus" header="Top Transaction" value="$1,050.20" color="text-red-600">
+                            <ng-template #cardCustom>
+                                <p class="text-gray-500">Your top expense in the month</p>
+                            </ng-template>
+                        </card>
+                    </div>
+                </div>
+            </ng-template>
+        </container>
+    </div>
+</div>
+<div class="grid grid-cols-12">
     <div class="col-span-9">
         <container icon="pi pi-calendar" title="Calendar" subtitle="Forecast your spendings">
             <ng-template #body>
